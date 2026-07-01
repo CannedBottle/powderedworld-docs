@@ -1,1 +1,3 @@
-# Yo Wsg Gang
+# About
+
+## its time to dash and crash

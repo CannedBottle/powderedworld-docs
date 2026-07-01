@@ -1,5 +1,8 @@
 site_name: Powdered World Engine
 
+site_url: https://cannedbottle.github.io/powderedworld-docs/
+
+repo_url: https://github.com/CannedBottle/powdered_world_engine
 
 
 theme:
@@ -16,5 +19,5 @@ theme:
 
 
 nav:
-  - Home: index.md
+  - Navigation Home: index.md
   - About: about.md
