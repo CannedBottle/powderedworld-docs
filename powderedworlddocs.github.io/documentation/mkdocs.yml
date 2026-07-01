@@ -1,0 +1,20 @@
+site_name: Powdered World Engine
+
+
+
+theme:
+  name: material
+
+  favicon: img/PowderedWorldIcon.png
+  logo: img/PowderedWorldIcon-black.png
+
+  palette:
+    scheme: slate
+
+    primary: amber
+    accent: light blue
+
+
+nav:
+  - Home: index.md
+  - About: about.md
