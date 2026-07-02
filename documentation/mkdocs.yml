@@ -20,4 +20,6 @@ theme:
 
 nav:
   - Navigation Home: index.md
+  - Getting Started: getting_started.md
+  - Reference: reference.md
   - About: about.md

@@ -1,6 +1,8 @@
 # Navigation Home
 
-
 ## Welcome to the Powdered World Engine Documentation!
+----------------------------------------------------------
 
-* sooooooo.... talk buddy am i right `:0`
+**Just a few things before we get started...**
+
+* Powdered World Engine will sometimes be referred to as PWEngine. Just remember that they mean the same thing!
