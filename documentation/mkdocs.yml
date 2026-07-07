@@ -18,6 +18,9 @@ theme:
     accent: light blue
 
 
+plugins:
+    - search
+
 nav:
   - Navigation Home: index.md
   - Getting Started: getting_started.md
