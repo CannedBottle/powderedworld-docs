@@ -21,5 +21,7 @@ theme:
 nav:
   - Navigation Home: index.md
   - Getting Started: getting_started.md
-  - Reference: reference.md
+  - Reference:
+      - PowderSimulation Node: powdersimnode.md
+      - SandInfoCS Autoload: sandinfocs.md
   - About: about.md

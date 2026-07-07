@@ -7,4 +7,4 @@
 
 * Powdered World Engine will sometimes be referred to as PWEngine. Just remember that they mean the same thing!
 
-* When referring to an individual pixel in the simulation, it can be called a "cell".
+* When referring to an individual pixel in the simulation, it can be called a "cell" or an "element".
