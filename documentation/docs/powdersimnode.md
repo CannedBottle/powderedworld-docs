@@ -1,4 +1,9 @@
-# `PowderSimulation` Node
+# PowderSimulation
+**Inherits:** [Node2D](https://docs.godotengine.org/en/stable/classes/class_node2d.html) < 
+[CanvasItem](https://docs.godotengine.org/en/stable/classes/class_canvasitem.html#class-canvasitem) < 
+[Node](https://docs.godotengine.org/en/stable/classes/class_node.html#class-node) < 
+[Object](https://docs.godotengine.org/en/stable/classes/class_object.html#class-object)
+
 --------------------------------
 
 This node is what you will use to handle individual simulations. It could be called an "orchestrator" class for the simulation, as it does not define the base
@@ -8,15 +13,15 @@ chunk or cell classes, but simply contains them and tells them what to do. It al
 
 -------------------------------
 
-### Methods
+### Public Methods
 | Return Type | Method |
 | ------ | -------- |
 | `void` | [FillWorld(AllElements with)](#void-fillworldallelements-with) |
 | `void` | [ClearWorld()](#void-clearworld) |
-| `Elements.AllElements` | [FindClosestElementW(from_pos: Vector2)](#findclosestelementwfrom_pos-vector2) |
-| `Elements.AllElements` | [FindClosestElementL(from_pos: Vector2I)](#findclosestelementlfrom_pos-vector2i) |
 | `void` | [PlaceElement(Vector2I pos, AllElements element, bool overRide = false)](#bool-placeelementvector2i-pos-allelements-element-bool-override-false) |
 | `void` | [PlaceGroupElements(Vector2I pos, AllElements element, bool overRide = false)](#void-placegroupelementsint-brushsize-vector2i-pos-allelements-element-bool-override-false) |
+| `Vector2I` | [WorldToLocal(Vector2 from_world)](#vector2i-worldtolocalvector2-from_world) |
+| `Vector2` | [LocalToWorld(Vector2I fromLocal, bool includeParentOffset = true)](#vector2-localtoworldvector2i-fromlocal-bool-includeparentoffset-true) |
 
 
 ### Properties
@@ -44,20 +49,20 @@ Replaces every cell in the current world with `AllElements.AIR`. Functionally eq
 
 --------------------------------------------
 
-### `FindClosestElementW(from_pos: Vector2)`
-> - `Vector2 from_pos` - the world-space coordinates to find the closest element from.
+### `Vector2I WorldToLocal(Vector2 from_world)`
+> - `Vector2 from_world` - the world-space coordinates to find the closest element from. world-space is the same as global_position for Nodes.
 
-Finds the closest element to the specified `from_pos`, in world space. Useful for things like dynamic footsteps.
+Returns the given cell world position (Godot's regular `global_position` for nodes) translated into local simulation position.
 
 <br>
 
 ---------------------------------------------
 
-### `FindClosestElementL(from_pos: Vector2I)`
-> - `Vector2 from_pos` - the local-space coordinates to find the closest element from.
+### `Vector2 LocalToWorld(Vector2I fromLocal, bool includeParentOffset = true)`
+> - `Vector2I fromLocal` - the local-space coordinates to translate to world-space.
+> - `bool includeParentOffset` - Whether or not to include the offset of the `PowderSimulation` parent Node in the calculation.
 
-The local-space equivalent of [`FindClosestElementW()`](#findclosestelementwfrom_pos-vector2). Local space contains the coordinates inside the simulation itself. <br>
-> *Ex. `(0, 0)` corresponds to the topmost and leftmost element.*
+Returns the given chunk local simulation position translated into world position. <br>
 
 <br>
 
@@ -86,7 +91,7 @@ If `overRide` is `true`, only changes the element if the element of the cell is 
 
 > - `int brushSize` - the amount the square placement pattern expands in all four directions.
 
-Calls [PlaceElement(Vector2I pos, AllElements element, bool overRide = false)](#bool-placeelementvector2i-pos-allelements-element-bool-override-false) repeatedly in a square pattern which starts at `pos` and expands outward `brushSize` times.
+Calls [PlaceElement](#bool-placeelementvector2i-pos-allelements-element-bool-override-false) repeatedly in a square pattern which starts at `pos` and expands outward `brushSize` times.
 
 > *Ex. `brushSize` = 0 will place a single element, and `brushsize` = 1 will place a group of nine elements, starting from `pos` and extending 1 cell in all four directions.*
 

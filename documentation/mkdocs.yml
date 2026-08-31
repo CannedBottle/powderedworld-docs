@@ -21,10 +21,17 @@ theme:
 plugins:
     - search
 
+markdown_extensions:
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+
 nav:
   - Navigation Home: index.md
   - Getting Started: getting_started.md
   - Reference:
-      - PowderSimulation Node: powdersimnode.md
-      - SandInfoCS Autoload: sandinfocs.md
+      - PowderSimulation: powdersimnode.md
+      - SandInfoCS: sandinfocs.md
+      - WorldStreamer: worldstreamer.md
+      - Save Order: saving+loading/save_order.md
   - About: about.md
