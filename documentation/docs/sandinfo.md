@@ -1,5 +1,5 @@
 ### Autoload
-# SandInfoCS
+# SandInfo
 **Inherits:** [Object](https://docs.godotengine.org/en/stable/classes/class_object.html#class-object)
 
 ----------------------------------

@@ -29,9 +29,11 @@ markdown_extensions:
 nav:
   - Navigation Home: index.md
   - Getting Started: getting_started.md
+  - Tutorials:
+      - WorldStreamer: worldstreamer.md
   - Reference:
       - PowderSimulation: powdersimnode.md
-      - SandInfoCS: sandinfocs.md
+      - SandInfo: sandinfo.md
       - WorldStreamer: worldstreamer.md
       - Save Order: saving+loading/save_order.md
   - About: about.md
