@@ -24,13 +24,12 @@ This class is what you will use for saving and loading
 ### Public Methods
 | Return Type | Method |
 | ------ | -------- |
-|unwritten desc|
 | void | [Close()](#void-close) |
 | bool | [FlushDeadChunks()](#bool-flushdeadchunks) |
-| void | [SaveWorld(bool Override)](#void-saveworldbool-override) |
+| bool | [SaveWorld()](#bool-saveworldbool-override) |
 | bool | [LoadWorld()](#bool-loadworld) |
-| void | [SaveChunk(Sandinfo.Chunk chunk)](#void-savechunksandinfochunk-chunk) |
-| void | [UnloadChunk(SandInfo.Chunk chunk)](#void-unloadchunksandinfochunk-chunk) |
+| void | [SaveChunk()](#void-savechunksandinfochunk-chunk) |
+| void | [UnloadChunk()](#void-unloadchunksandinfochunk-chunk) |
 | bool | [LoadChunk(Vector2I ChunkPosition)](#bool-loadchunkvector2i-chunkposition) |
 | Array[Vector2I] | [GetAvailableChunks()](#arrayvector2i-getavailablechunks) |
 
@@ -100,9 +99,85 @@ Returns whether the given file correctly contains the key and the correct file e
 
 ### Method Descriptions
 
-### `void` FillWorld(AllElements with)
+### `void` Close()
 
-Replaces every cell in the current world with the element specified in `with`. 
+ Flushes dead chunks, closes the file, and disposes of this object.<br><br> <b>Note:</b> WorldStreamer will automatically close when it's freed, which happens when it goes out of scope or when it gets assigned with null. In C# the reference must be disposed after we are done using it, this can be done with the `using` statement or calling the `Dispose` method directly.
+
+<br>
+
+--------------------------------------------
+
+### `bool` FlushDeadChunks()
+
+Reads through the file and removes saved chunks that are duplicates. Uses `ChunkFileOffsets` to determine duplicates. 
+<br>
+<b>Will most likely fix a corrupted file.</b> 
+
+Automatically called when `Close` is called. Should not be called often, as it rewrites the whole file.
+
+> Returns whether or not there were any dead chunks to remove.
+
+<br>
+
+--------------------------------------------
+
+### `bool` SaveWorld(`bool` Override)
+
+> - `bool Override` - Whether or not to override the contents of the file, essentially replacing the contents with the current ones.
+
+Saves the world to disk, only operating on the chunks currently active in the simulation.
+
+> Returns whether the operation was successful or not.
+
+<br>
+
+--------------------------------------------
+
+### `bool` LoadWorld()
+
+Replaces the current active chunks in the simulation with the corresponding saved chunks in the file. <b>Does not create chunks.</b>
+
+> Returns whether or not there were any currently loaded chunks saved in the file.
+
+<br>
+
+--------------------------------------------
+
+### `void` SaveChunk(`SandInfo.Chunk` chunk)
+
+> - `SandInfo.Chunk chunk` - The chunk to save to file.
+
+Saves the given chunk to the file. Creates a dead chunk in the file if there was an old version already saved. The dead chunk can be removed by calling [FlushDeadChunks()](#bool-flushdeadchunks).
+
+<br>
+
+--------------------------------------------
+
+### `void` UnloadChunk(`SandInfo.Chunk` chunk)
+
+> - `SandInfo.Chunk chunk` - The chunk to unload.
+
+Saves the given Chunk to the file, and removes it from the simulation. Uses [SaveChunk()](#void-savechunksandinfochunk-chunk) to save to file, so everything from that description applies here.
+
+<br>
+
+--------------------------------------------
+
+### `bool` LoadChunk(`Vector2I` ChunkPosition)
+
+> - `Vector2I ChunkPosition` - The position to load a chunk to.
+
+Replaces or adds a chunk to the simulation with corresponding data from the file.
+
+> - Returns whether the specified chunk position exists in the file.
+
+<br>
+
+--------------------------------------------
+
+### `Array[Vector2I]` GetAvailableChunks()
+
+Returns a Godot Array containing the positions of all chunks saved in the file.
 
 <br>
 
