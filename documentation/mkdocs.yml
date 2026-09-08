@@ -35,5 +35,6 @@ nav:
       - PowderSimulation: powdersimnode.md
       - SandInfo: sandinfo.md
       - WorldStreamer: worldstreamer.md
+      - Elements: elements.md
       - Save Order: saving+loading/save_order.md
   - About: about.md

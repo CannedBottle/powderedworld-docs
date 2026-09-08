@@ -3,7 +3,7 @@
 
 -----------------
 
-This class is what you will use for saving and loading 
+This class is what you will use for saving and loading the simulations created by a [PowderSimulation](powdersimnode.md) Node.
 
 <br><br>
 
@@ -32,13 +32,6 @@ This class is what you will use for saving and loading
 | void | [UnloadChunk()](#void-unloadchunksandinfochunk-chunk) |
 | bool | [LoadChunk(Vector2I ChunkPosition)](#bool-loadchunkvector2i-chunkposition) |
 | Array[Vector2I] | [GetAvailableChunks()](#arrayvector2i-getavailablechunks) |
-
-
-
-
-### Properties
-| Type | Property |
-| -------- | --------- |
 
 
 ---------------------------------

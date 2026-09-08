@@ -54,6 +54,33 @@ chunk or cell classes, but simply contains them and tells them what to do. It al
 ### Properties
 | Type | Property |
 | -------- | --------- |
+| **Exported Properties** |
+| float | [SimulationSpeed](#float-simulationspeed) |
+| bool | [UseDirtyRects](#bool-usedirtyrects) |
+| int | [IndividualChunkSize](#int-individualchunksize) |
+| Vector2I | [ChunkGridSize](#vector2i-chunkgridsize) |
+| int | [ChunkInsomnia](#int-chunkinsomnia) |
+| bool | [Centered](#bool-centered) |
+| int | [PixelScale](#int-pixelscale) |
+| bool | [FollowEnabled](#bool-followenabled) |
+| Node2D | [FollowNode](#node2d-follownode) |
+| Rect2 | [FollowAreaConstraint](#rect2-followareaconstraint) |
+| bool | [FollowCenterConstraintsOnFollowedNode](#bool-followcenterconstraintsonfollowednode) |
+| bool | [DebugMode](#bool-debugmode) |
+| Color | [DebugChunkBorderColor](#color-debugchunkbordercolor) |
+| bool | [ShowSimBorder](#bool-showsimborder) |
+| int | [SimBorderWidth](#int-simborderwidth) |
+| **Non-Exported Properties** |
+| Dictionary<Vector2I, SandInfo.Chunk> | [Chunks](#dictionaryvector2i-sandinfochunk-chunks) |
+| Vector2I | [SimulationSize](#vector2i-simulationsize) |
+| Vector2I | [SimulationMaxExtents](#vector2i-simulationmaxextents) |
+| Vector2I | [SimulationMinExtents](#vector2i-simulationminextents) |
+| float | [UpdateTime](#float-updatetime) |
+| float | [DrawTime](#float-drawtime) |
+| List<ChunkRendererCS> | [ActiveChunkRenderers](#listchunkrenderercs-activechunkrenderers) |
+| Node2D | [ChunkRendererParent](#node2d-chunkrendererparent) |
+| Dictionary<Vector2I, int> | [NeighborIndexOffsets](#dictionaryvector2i-int-neighborindexoffsets) |
+
 
 
 ---------------------------------
@@ -144,7 +171,7 @@ Returns the current WorldStreamer instance attached to this node.
 
 --------------------------------------------
 
-### `void` GetChunk(`Vector2I` pos)
+### `SandInfo.Chunk` GetChunk(`Vector2I` pos)
 
 > - `Vector2I pos` - The position to search for a chunk.
 
@@ -354,3 +381,155 @@ Replaces the element at `pos` with `element`.
 <br>
 
 --------------------------------------------
+
+--------------------------------------------
+
+### Property Descriptions
+
+### `float` SimulationSpeed
+
+How fast the simulation runs, with 1.0 corresponding with 60 updates/second.
+
+---------------------------------------------
+
+### `bool` UseDirtyRects
+
+Dirty rects are rectangles calculated at runtime that only contain the cells that were updated in the last frame, lowering the total number of cells needing updates.
+<br><br>
+Recommended for chunk sizes 32 and above.
+
+---------------------------------------------
+
+### `int` IndividualChunkSize
+
+How many cells squared each cell contains. It is squared because the chunk size is only measured on one axis.
+
+---------------------------------------------
+
+### `Vector2I` ChunkGridSize
+
+How many chunks to be used in the simulation.
+
+---------------------------------------------
+
+### `int` ChunkInsomnia
+
+How many update loops with no change in a specific chunk have to occur before sleeping the chunk.
+
+---------------------------------------------
+
+### `bool` Centered
+
+Whether the simulation appears at the center of this Node's `position` or offset like Control Nodes are.
+
+---------------------------------------------
+
+### `int` PixelScale
+
+How big the pixels appear on the screen.
+
+---------------------------------------------
+
+### `bool` FollowEnabled
+
+Whether or not to use the **Node Follow** feature.
+
+**Node Follow** constrains the simulation to a certain size by unloading/loading chunks dynamically as the [FollowNode](#node2d-follownode)'s position changes. It also works with the filesystem if a [WorldStreamer](worldstreamer.md) is set with [SetWorldStreamer()](#void-setworldstreamerworldstreamer-newstreamer).
+
+---------------------------------------------
+
+### `Node2D` FollowNode
+
+The Node to follow when [FollowEnabled](#bool-followenabled) is true.
+
+---------------------------------------------
+
+### `Rect2` FollowAreaConstraint
+
+The size to constrain the simulation in when [FollowEnabled](#bool-followenabled) is true. **DO NOT** set the `Position` property of the Rect2, it will get overridden.
+
+---------------------------------------------
+
+### `bool` FollowCenterConstraintsOnFollowedNode
+
+Whether or not to center the constraints on [FollowNode](#node2d-follownode) by setting [`FollowAreaConstraint.Position`](#rect2-followareaconstraint) to `-(`[`FollowAreaConstraint.Size`](#rect2-followareaconstraint) `/ 2.0).` Only effective when [FollowEnabled](#bool-followenabled) is true.
+
+---------------------------------------------
+
+### `bool` DebugMode
+
+Draws a visual of chunk borders and dirty rects.
+
+---------------------------------------------
+
+### `Color` DebugChunkBorderColor
+
+What color to display the chunk borders as when [DebugMode](#bool-debugmode) is true.
+
+---------------------------------------------
+
+### `bool` ShowSimBorder
+
+Draws a rectangular border around the entire simulation.
+
+---------------------------------------------
+
+### `int` SimBorderWidth
+
+How wide the line at the simulation border will be.
+
+---------------------------------------------
+
+### `Dictionary<Vector2I, SandInfo.Chunk>` Chunks
+
+The current chunks in the simulation mapped to their positions.
+
+---------------------------------------------
+
+### `Vector2I` SimulationSize
+
+The size of all the cells in the simulation, basically the max extents of the simulation if the top-left corner was (0, 0)
+
+---------------------------------------------
+
+### `Vector2I` SimulationMaxExtents
+
+The bottom-rightmost cell position in the simulation.
+
+---------------------------------------------
+
+### `Vector2I` SimulationMinExtents
+
+The top-leftmost cell position in the simulation.
+
+---------------------------------------------
+
+### `float` UpdateTime
+
+The amount of time it took this frame to update the simulation. Used for debug purposes.
+
+---------------------------------------------
+
+### `float` DrawTime
+
+The amount of time it took this frame to draw the simulation. Used for debug purposes.
+
+---------------------------------------------
+
+### `List<ChunkRendererCS>` ActiveChunkRenderers
+
+The active ChunkRendererCSs in the simulation. There is one ChunkRenderer per chunk.
+
+---------------------------------------------
+
+### `Node2D` ChunkRendererParent
+
+The parent node of all the ChunkRenderer nodes.
+
+---------------------------------------------
+
+### `Dictionary<Vector2I, int>` NeighborIndexOffsets
+
+A C# Dictionary that maps the Vector2I constants from [SandInfo](sandinfo.md) to the amount to add to a cell index to get that specific neighbor.
+
+---------------------------------------------
