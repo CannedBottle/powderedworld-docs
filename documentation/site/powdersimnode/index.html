@@ -11,10 +11,10 @@
         <link rel="canonical" href="https://cannedbottle.github.io/powderedworld-docs/powdersimnode/">
       
       
-        <link rel="prev" href="../getting_started/">
+        <link rel="prev" href="../worldstreamer/">
       
       
-        <link rel="next" href="../sandinfocs/">
+        <link rel="next" href="../sandinfo/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>PowderSimulation Node - Powdered World Engine</title>
+        <title>PowderSimulation - Powdered World Engine</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#powdersimulation-node" class="md-skip">
+        <a href="#powdersimulation" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              PowderSimulation Node
+              PowderSimulation
             
           </span>
         </div>
@@ -279,6 +279,88 @@
       
   
   
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tutorials
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../worldstreamer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WorldStreamer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -292,10 +374,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   
@@ -313,8 +395,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -347,7 +429,7 @@
   <span class="md-ellipsis">
     
   
-    PowderSimulation Node
+    PowderSimulation
   
 
     
@@ -365,7 +447,7 @@
   <span class="md-ellipsis">
     
   
-    PowderSimulation Node
+    PowderSimulation
   
 
     
@@ -391,10 +473,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#methods" class="md-nav__link">
+  <a href="#public-methods" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Methods
+        Public Methods
       
     </span>
   </a>
@@ -446,10 +528,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#findclosestelementwfrom_pos-vector2" class="md-nav__link">
+  <a href="#vector2i-worldtolocalvector2-from_world" class="md-nav__link">
     <span class="md-ellipsis">
       
-        FindClosestElementW(from_pos: Vector2)
+        Vector2I WorldToLocal(Vector2 from_world)
       
     </span>
   </a>
@@ -457,10 +539,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#findclosestelementlfrom_pos-vector2i" class="md-nav__link">
+  <a href="#vector2-localtoworldvector2i-fromlocal-bool-includeparentoffset-true" class="md-nav__link">
     <span class="md-ellipsis">
       
-        FindClosestElementL(from_pos: Vector2I)
+        Vector2 LocalToWorld(Vector2I fromLocal, bool includeParentOffset = true)
       
     </span>
   </a>
@@ -489,6 +571,534 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#void-setworldstreamerworldstreamer-newstreamer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        void SetWorldStreamer(WorldStreamer NewStreamer)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#worldstreamer-getworldstreamer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WorldStreamer GetWorldStreamer()
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sandinfochunk-getchunkvector2i-pos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SandInfo.Chunk GetChunk(Vector2I pos)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bool-simcontainscellvector2i-pos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bool SimContainsCell(Vector2I pos)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bool-simcontainschunkvector2i-pos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bool SimContainsChunk(Vector2I pos)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#void-setfollowmodebool-to" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        void SetFollowMode(bool to)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#void-setfollownodenode2d-what" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        void SetFollowNode(Node2D what)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#void-setconstraintsvector2-to" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        void SetConstraints(Vector2 to)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vector2-chunklocaltoworldvector2i-fromlocal-bool-includeparentoffset-true" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vector2 ChunkLocalToWorld(Vector2I fromLocal, bool includeParentOffset = true)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vector2i-localtochunkvector2i-localpos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vector2I LocalToChunk(Vector2I localPos)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vector2i-worldtochunkvector2-worldpos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vector2I WorldToChunk(Vector2 worldPos)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#void-queueswapsandinfocell-cell1-sandinfocell-cell2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        void QueueSwap(SandInfo.Cell Cell1, SandInfo.Cell Cell2)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#void-commitswapqueue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        void CommitSwapQueue()
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bool-addchunkvector2i-at" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bool AddChunk(Vector2I at)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bool-removechunkvector2i-at" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bool RemoveChunk(Vector2I at)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#void-initgrid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        void InitGrid()
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#void-updatechunksint-tick" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        void UpdateChunks(int tick)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#void-decidesleepingchunks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        void DecideSleepingChunks()
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#void-renderchunkupdates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        void RenderChunkUpdates()
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#void-updatesimulationsize" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        void UpdateSimulationSize()
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#void-updatesimulationbool-wait-true" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        void UpdateSimulation(bool wait = true)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sandinfocell-getcellvector2i-pos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SandInfo.Cell GetCell(Vector2I pos)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#void-setcellvector2i-pos-allelements-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        void SetCell(Vector2I pos, AllElements element)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#property-descriptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Property Descriptions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#float-simulationspeed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        float SimulationSpeed
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bool-usedirtyrects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bool UseDirtyRects
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#int-individualchunksize" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        int IndividualChunkSize
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vector2i-chunkgridsize" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vector2I ChunkGridSize
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#int-chunkinsomnia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        int ChunkInsomnia
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bool-centered" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bool Centered
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#int-pixelscale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        int PixelScale
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bool-followenabled" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bool FollowEnabled
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node2d-follownode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node2D FollowNode
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rect2-followareaconstraint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rect2 FollowAreaConstraint
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bool-followcenterconstraintsonfollowednode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bool FollowCenterConstraintsOnFollowedNode
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bool-debugmode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bool DebugMode
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#color-debugchunkbordercolor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Color DebugChunkBorderColor
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bool-showsimborder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bool ShowSimBorder
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#int-simborderwidth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        int SimBorderWidth
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dictionaryvector2i-sandinfochunk-chunks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dictionary&lt;Vector2I, SandInfo.Chunk&gt; Chunks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vector2i-simulationsize" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vector2I SimulationSize
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vector2i-simulationmaxextents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vector2I SimulationMaxExtents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vector2i-simulationminextents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vector2I SimulationMinExtents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#float-updatetime" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        float UpdateTime
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#float-drawtime" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        float DrawTime
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listchunkrenderercs-activechunkrenderers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        List&lt;ChunkRendererCS&gt; ActiveChunkRenderers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node2d-chunkrendererparent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node2D ChunkRendererParent
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dictionaryvector2i-int-neighborindexoffsets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dictionary&lt;Vector2I, int&gt; NeighborIndexOffsets
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -505,14 +1115,98 @@
   
   
     <li class="md-nav__item">
-      <a href="../sandinfocs/" class="md-nav__link">
+      <a href="../sandinfo/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    SandInfoCS Autoload
+    SandInfo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../worldstreamer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WorldStreamer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Elements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../saving%2Bloading/save_order/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Save Order
   
 
     
@@ -587,10 +1281,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#methods" class="md-nav__link">
+  <a href="#public-methods" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Methods
+        Public Methods
       
     </span>
   </a>
@@ -642,10 +1336,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#findclosestelementwfrom_pos-vector2" class="md-nav__link">
+  <a href="#vector2i-worldtolocalvector2-from_world" class="md-nav__link">
     <span class="md-ellipsis">
       
-        FindClosestElementW(from_pos: Vector2)
+        Vector2I WorldToLocal(Vector2 from_world)
       
     </span>
   </a>
@@ -653,10 +1347,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#findclosestelementlfrom_pos-vector2i" class="md-nav__link">
+  <a href="#vector2-localtoworldvector2i-fromlocal-bool-includeparentoffset-true" class="md-nav__link">
     <span class="md-ellipsis">
       
-        FindClosestElementL(from_pos: Vector2I)
+        Vector2 LocalToWorld(Vector2I fromLocal, bool includeParentOffset = true)
       
     </span>
   </a>
@@ -685,6 +1379,534 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#void-setworldstreamerworldstreamer-newstreamer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        void SetWorldStreamer(WorldStreamer NewStreamer)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#worldstreamer-getworldstreamer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WorldStreamer GetWorldStreamer()
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sandinfochunk-getchunkvector2i-pos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SandInfo.Chunk GetChunk(Vector2I pos)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bool-simcontainscellvector2i-pos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bool SimContainsCell(Vector2I pos)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bool-simcontainschunkvector2i-pos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bool SimContainsChunk(Vector2I pos)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#void-setfollowmodebool-to" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        void SetFollowMode(bool to)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#void-setfollownodenode2d-what" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        void SetFollowNode(Node2D what)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#void-setconstraintsvector2-to" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        void SetConstraints(Vector2 to)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vector2-chunklocaltoworldvector2i-fromlocal-bool-includeparentoffset-true" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vector2 ChunkLocalToWorld(Vector2I fromLocal, bool includeParentOffset = true)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vector2i-localtochunkvector2i-localpos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vector2I LocalToChunk(Vector2I localPos)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vector2i-worldtochunkvector2-worldpos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vector2I WorldToChunk(Vector2 worldPos)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#void-queueswapsandinfocell-cell1-sandinfocell-cell2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        void QueueSwap(SandInfo.Cell Cell1, SandInfo.Cell Cell2)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#void-commitswapqueue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        void CommitSwapQueue()
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bool-addchunkvector2i-at" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bool AddChunk(Vector2I at)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bool-removechunkvector2i-at" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bool RemoveChunk(Vector2I at)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#void-initgrid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        void InitGrid()
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#void-updatechunksint-tick" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        void UpdateChunks(int tick)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#void-decidesleepingchunks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        void DecideSleepingChunks()
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#void-renderchunkupdates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        void RenderChunkUpdates()
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#void-updatesimulationsize" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        void UpdateSimulationSize()
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#void-updatesimulationbool-wait-true" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        void UpdateSimulation(bool wait = true)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sandinfocell-getcellvector2i-pos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SandInfo.Cell GetCell(Vector2I pos)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#void-setcellvector2i-pos-allelements-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        void SetCell(Vector2I pos, AllElements element)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#property-descriptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Property Descriptions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#float-simulationspeed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        float SimulationSpeed
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bool-usedirtyrects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bool UseDirtyRects
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#int-individualchunksize" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        int IndividualChunkSize
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vector2i-chunkgridsize" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vector2I ChunkGridSize
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#int-chunkinsomnia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        int ChunkInsomnia
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bool-centered" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bool Centered
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#int-pixelscale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        int PixelScale
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bool-followenabled" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bool FollowEnabled
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node2d-follownode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node2D FollowNode
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rect2-followareaconstraint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rect2 FollowAreaConstraint
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bool-followcenterconstraintsonfollowednode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bool FollowCenterConstraintsOnFollowedNode
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bool-debugmode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bool DebugMode
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#color-debugchunkbordercolor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Color DebugChunkBorderColor
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bool-showsimborder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bool ShowSimBorder
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#int-simborderwidth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        int SimBorderWidth
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dictionaryvector2i-sandinfochunk-chunks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dictionary&lt;Vector2I, SandInfo.Chunk&gt; Chunks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vector2i-simulationsize" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vector2I SimulationSize
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vector2i-simulationmaxextents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vector2I SimulationMaxExtents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vector2i-simulationminextents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vector2I SimulationMinExtents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#float-updatetime" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        float UpdateTime
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#float-drawtime" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        float DrawTime
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listchunkrenderercs-activechunkrenderers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        List&lt;ChunkRendererCS&gt; ActiveChunkRenderers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node2d-chunkrendererparent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node2D ChunkRendererParent
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dictionaryvector2i-int-neighborindexoffsets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dictionary&lt;Vector2I, int&gt; NeighborIndexOffsets
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -705,13 +1927,19 @@
   
 
 
-<h1 id="powdersimulation-node"><code>PowderSimulation</code> Node</h1>
+<h1 id="powdersimulation">PowderSimulation</h1>
+<p><strong>Inherits:</strong> <a href="https://docs.godotengine.org/en/stable/classes/class_node2d.html">Node2D</a> &lt; 
+<a href="https://docs.godotengine.org/en/stable/classes/class_canvasitem.html#class-canvasitem">CanvasItem</a> &lt; 
+<a href="https://docs.godotengine.org/en/stable/classes/class_node.html#class-node">Node</a> &lt; 
+<a href="https://docs.godotengine.org/en/stable/classes/class_object.html#class-object">Object</a></p>
 <hr />
 <p>This node is what you will use to handle individual simulations. It could be called an "orchestrator" class for the simulation, as it does not define the base
 chunk or cell classes, but simply contains them and tells them what to do. It also contains useful methods for maniplulating the world, such as placing elements or clearing all cells.</p>
-<p><br></p>
+<p><br><br></p>
+<p><em><strong>NOTE:</strong> This node defines <code>_Ready()</code> and <code>_Draw()</code>, so if you are attaching a script to this node and using those functions, make sure to include <code>super()</code> in it so it still calls the parent class functions as well as whatever you put.</em>
+<br></p>
 <hr />
-<h3 id="methods">Methods</h3>
+<h3 id="public-methods">Public Methods</h3>
 <table>
 <thead>
 <tr>
@@ -721,28 +1949,120 @@ chunk or cell classes, but simply contains them and tells them what to do. It al
 </thead>
 <tbody>
 <tr>
-<td><code>void</code></td>
-<td><a href="#void-fillworldallelements-with">FillWorld(AllElements with)</a></td>
+<td>void</td>
+<td><a href="#void-fillworldallelements-with">FillWorld()</a></td>
 </tr>
 <tr>
-<td><code>void</code></td>
+<td>void</td>
 <td><a href="#void-clearworld">ClearWorld()</a></td>
 </tr>
 <tr>
-<td><code>Elements.AllElements</code></td>
-<td><a href="#findclosestelementwfrom_pos-vector2">FindClosestElementW(from_pos: Vector2)</a></td>
+<td>bool</td>
+<td><a href="#bool-placeelementvector2i-pos-allelements-element-bool-override-false">PlaceElement()</a></td>
 </tr>
 <tr>
-<td><code>Elements.AllElements</code></td>
-<td><a href="#findclosestelementlfrom_pos-vector2i">FindClosestElementL(from_pos: Vector2I)</a></td>
+<td>void</td>
+<td><a href="#void-placegroupelementsint-brushsize-vector2i-pos-allelements-element-bool-override-false">PlaceGroupElements()</a></td>
 </tr>
 <tr>
-<td><code>void</code></td>
-<td><a href="#bool-placeelementvector2i-pos-allelements-element-bool-override-false">PlaceElement(Vector2I pos, AllElements element, bool overRide = false)</a></td>
+<td>Vector2I</td>
+<td><a href="#vector2i-worldtolocalvector2-from_world">WorldToLocal()</a></td>
 </tr>
 <tr>
-<td><code>void</code></td>
-<td><a href="#void-placegroupelementsint-brushsize-vector2i-pos-allelements-element-bool-override-false">PlaceGroupElements(Vector2I pos, AllElements element, bool overRide = false)</a></td>
+<td>Vector2</td>
+<td><a href="#vector2-localtoworldvector2i-fromlocal-bool-includeparentoffset-true">LocalToWorld()</a></td>
+</tr>
+<tr>
+<td>void</td>
+<td><a href="#void-setworldstreamerworldstreamer-newstreamer">SetWorldStreamer()</a></td>
+</tr>
+<tr>
+<td><a href="../worldstreamer/">WorldStreamer</a></td>
+<td><a href="#worldstreamer-getworldstreamer">GetWorldStreamer()</a></td>
+</tr>
+<tr>
+<td><a href="../sandinfo/">SandInfo.Chunk</a></td>
+<td><a href="#sandinfochunk-getchunkvector2i-pos">GetChunk()</a></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><a href="#bool-simcontainscellvector2i-pos">SimContainsCell()</a></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><a href="#bool-simcontainschunkvector2i-pos">SimContainsChunk()</a></td>
+</tr>
+<tr>
+<td>void</td>
+<td><a href="#void-setfollowmodebool-to">SetFollowMode()</a></td>
+</tr>
+<tr>
+<td>void</td>
+<td><a href="#void-setfollownodenode2d-what">SetFollowNode()</a></td>
+</tr>
+<tr>
+<td>void</td>
+<td><a href="#void-setconstraintsvector2-to">SetConstraints()</a></td>
+</tr>
+<tr>
+<td>Vector2</td>
+<td><a href="#vector2-chunklocaltoworldvector2i-fromlocal-bool-includeparentoffset-true">ChunkLocalToWorld()</a></td>
+</tr>
+<tr>
+<td>Vector2I</td>
+<td><a href="#vector2i-localtochunkvector2i-localpos">LocalToChunk()</a></td>
+</tr>
+<tr>
+<td>Vector2I</td>
+<td><a href="#vector2i-worldtochunkvector2-worldpos">WorldToChunk()</a></td>
+</tr>
+<tr>
+<td>void</td>
+<td><a href="#void-queueswapsandinfocell-cell1-sandinfocell-cell2">QueueSwap()</a></td>
+</tr>
+<tr>
+<td>void</td>
+<td><a href="#void-commitswapqueue">CommitSwapQueue()</a></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><a href="#bool-addchunkvector2i-at">AddChunk()</a></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><a href="#bool-removechunkvector2i-at">RemoveChunk()</a></td>
+</tr>
+<tr>
+<td>void</td>
+<td><a href="#void-initgrid">InitGrid()</a></td>
+</tr>
+<tr>
+<td>void</td>
+<td><a href="#void-updatechunksint-tick">UpdateChunks(int tick)</a></td>
+</tr>
+<tr>
+<td>void</td>
+<td><a href="#void-decidesleepingchunks">DecideSleepingChunks()</a></td>
+</tr>
+<tr>
+<td>void</td>
+<td><a href="#void-renderchunkupdates">RenderChunkUpdates()</a></td>
+</tr>
+<tr>
+<td>void</td>
+<td><a href="#void-updatesimulationsize">UpdateSimulationSize()</a></td>
+</tr>
+<tr>
+<td>void</td>
+<td><a href="#void-updatesimulationbool-wait-true">UpdateSimulation()</a></td>
+</tr>
+<tr>
+<td><a href="../sandinfo/">SandInfo.Cell</a></td>
+<td><a href="#sandinfocell-getcellvector2i-pos">GetCell()</a></td>
+</tr>
+<tr>
+<td>void</td>
+<td><a href="#void-setcellvector2i-pos-allelements-element">SetCell(Vector2I pos, AllElements element)</a></td>
 </tr>
 </tbody>
 </table>
@@ -756,43 +2076,141 @@ chunk or cell classes, but simply contains them and tells them what to do. It al
 </thead>
 <tbody>
 <tr>
+<td><strong>Exported Properties</strong></td>
 <td></td>
+</tr>
+<tr>
+<td>float</td>
+<td><a href="#float-simulationspeed">SimulationSpeed</a></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><a href="#bool-usedirtyrects">UseDirtyRects</a></td>
+</tr>
+<tr>
+<td>int</td>
+<td><a href="#int-individualchunksize">IndividualChunkSize</a></td>
+</tr>
+<tr>
+<td>Vector2I</td>
+<td><a href="#vector2i-chunkgridsize">ChunkGridSize</a></td>
+</tr>
+<tr>
+<td>int</td>
+<td><a href="#int-chunkinsomnia">ChunkInsomnia</a></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><a href="#bool-centered">Centered</a></td>
+</tr>
+<tr>
+<td>int</td>
+<td><a href="#int-pixelscale">PixelScale</a></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><a href="#bool-followenabled">FollowEnabled</a></td>
+</tr>
+<tr>
+<td>Node2D</td>
+<td><a href="#node2d-follownode">FollowNode</a></td>
+</tr>
+<tr>
+<td>Rect2</td>
+<td><a href="#rect2-followareaconstraint">FollowAreaConstraint</a></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><a href="#bool-followcenterconstraintsonfollowednode">FollowCenterConstraintsOnFollowedNode</a></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><a href="#bool-debugmode">DebugMode</a></td>
+</tr>
+<tr>
+<td>Color</td>
+<td><a href="#color-debugchunkbordercolor">DebugChunkBorderColor</a></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><a href="#bool-showsimborder">ShowSimBorder</a></td>
+</tr>
+<tr>
+<td>int</td>
+<td><a href="#int-simborderwidth">SimBorderWidth</a></td>
+</tr>
+<tr>
+<td><strong>Non-Exported Properties</strong></td>
 <td></td>
+</tr>
+<tr>
+<td>Dictionary<Vector2I, SandInfo.Chunk></td>
+<td><a href="#dictionaryvector2i-sandinfochunk-chunks">Chunks</a></td>
+</tr>
+<tr>
+<td>Vector2I</td>
+<td><a href="#vector2i-simulationsize">SimulationSize</a></td>
+</tr>
+<tr>
+<td>Vector2I</td>
+<td><a href="#vector2i-simulationmaxextents">SimulationMaxExtents</a></td>
+</tr>
+<tr>
+<td>Vector2I</td>
+<td><a href="#vector2i-simulationminextents">SimulationMinExtents</a></td>
+</tr>
+<tr>
+<td>float</td>
+<td><a href="#float-updatetime">UpdateTime</a></td>
+</tr>
+<tr>
+<td>float</td>
+<td><a href="#float-drawtime">DrawTime</a></td>
+</tr>
+<tr>
+<td>List<ChunkRendererCS></td>
+<td><a href="#listchunkrenderercs-activechunkrenderers">ActiveChunkRenderers</a></td>
+</tr>
+<tr>
+<td>Node2D</td>
+<td><a href="#node2d-chunkrendererparent">ChunkRendererParent</a></td>
+</tr>
+<tr>
+<td>Dictionary<Vector2I, int></td>
+<td><a href="#dictionaryvector2i-int-neighborindexoffsets">NeighborIndexOffsets</a></td>
 </tr>
 </tbody>
 </table>
 <hr />
 <h3 id="method-descriptions">Method Descriptions</h3>
-<h3 id="void-fillworldallelements-with"><code>void FillWorld(AllElements with)</code></h3>
+<h3 id="void-fillworldallelements-with"><code>void</code> FillWorld(<code>AllElements</code> with)</h3>
 <p>Replaces every cell in the current world with the element specified in <code>with</code>. </p>
 <p><br></p>
 <hr />
-<h3 id="void-clearworld"><code>void ClearWorld()</code></h3>
+<h3 id="void-clearworld"><code>void</code> ClearWorld()</h3>
 <p>Replaces every cell in the current world with <code>AllElements.AIR</code>. Functionally equivalent to calling <code>FillWorld(AllElements.AIR)</code>.</p>
 <p><br></p>
 <hr />
-<h3 id="findclosestelementwfrom_pos-vector2"><code>FindClosestElementW(from_pos: Vector2)</code></h3>
+<h3 id="vector2i-worldtolocalvector2-from_world"><code>Vector2I</code> WorldToLocal(<code>Vector2</code> from_world)</h3>
 <blockquote>
 <ul>
-<li><code>Vector2 from_pos</code> - the world-space coordinates to find the closest element from.</li>
+<li><code>Vector2 from_world</code> - the world-space coordinates to find the closest element from. world-space is the same as global_position for Nodes.</li>
 </ul>
 </blockquote>
-<p>Finds the closest element to the specified <code>from_pos</code>, in world space. Useful for things like dynamic footsteps.</p>
+<p>Returns the given cell world position (Godot's regular <code>global_position</code> for nodes) translated into local simulation position.</p>
 <p><br></p>
 <hr />
-<h3 id="findclosestelementlfrom_pos-vector2i"><code>FindClosestElementL(from_pos: Vector2I)</code></h3>
+<h3 id="vector2-localtoworldvector2i-fromlocal-bool-includeparentoffset-true"><code>Vector2</code> LocalToWorld(<code>Vector2I</code> fromLocal, <code>bool</code> includeParentOffset <code>= true</code>)</h3>
 <blockquote>
 <ul>
-<li><code>Vector2 from_pos</code> - the local-space coordinates to find the closest element from.</li>
+<li><code>Vector2I fromLocal</code> - the local-space coordinates to translate to world-space.</li>
+<li><code>bool includeParentOffset</code> - Whether or not to include the offset of the <code>PowderSimulation</code> parent Node in the calculation.</li>
 </ul>
 </blockquote>
-<p>The local-space equivalent of <a href="#findclosestelementwfrom_pos-vector2"><code>FindClosestElementW()</code></a>. Local space contains the coordinates inside the simulation itself. <br></p>
-<blockquote>
-<p><em>Ex. <code>(0, 0)</code> corresponds to the topmost and leftmost element.</em></p>
-</blockquote>
+<p>Returns the given chunk local simulation position translated into world position. <br></p>
 <p><br></p>
 <hr />
-<h3 id="bool-placeelementvector2i-pos-allelements-element-bool-override-false"><code>bool PlaceElement(Vector2I pos, AllElements element, bool overRide = false)</code></h3>
+<h3 id="bool-placeelementvector2i-pos-allelements-element-bool-override-false"><code>bool</code> PlaceElement(<code>Vector2I</code> pos, <code>AllElements</code> element, <code>bool</code> overRide = false)</h3>
 <blockquote>
 <ul>
 <li><code>Vector2I pos</code> - the local-space coordinates to the cell where the specified element will be placed.</li>
@@ -811,17 +2229,256 @@ If <code>overRide</code> is <code>true</code>, only changes the element if the e
 </blockquote>
 <p><br></p>
 <hr />
-<h3 id="void-placegroupelementsint-brushsize-vector2i-pos-allelements-element-bool-override-false"><code>void PlaceGroupElements(int brushSize, Vector2I pos, AllElements element, bool overRide = false)</code></h3>
+<h3 id="void-placegroupelementsint-brushsize-vector2i-pos-allelements-element-bool-override-false"><code>void</code> PlaceGroupElements(<code>int</code> brushSize, <code>Vector2I</code> pos, <code>AllElements</code> element, <code>bool</code> overRide <code>= false</code>)</h3>
 <blockquote>
 <ul>
 <li><code>int brushSize</code> - the amount the square placement pattern expands in all four directions.</li>
 </ul>
 </blockquote>
-<p>Calls <a href="#bool-placeelementvector2i-pos-allelements-element-bool-override-false">PlaceElement(Vector2I pos, AllElements element, bool overRide = false)</a> repeatedly in a square pattern which starts at <code>pos</code> and expands outward <code>brushSize</code> times.</p>
+<p>Calls <a href="#bool-placeelementvector2i-pos-allelements-element-bool-override-false">PlaceElement</a> repeatedly in a square pattern which starts at <code>pos</code> and expands outward <code>brushSize</code> times.</p>
 <blockquote>
 <p><em>Ex. <code>brushSize</code> = 0 will place a single element, and <code>brushsize</code> = 1 will place a group of nine elements, starting from <code>pos</code> and extending 1 cell in all four directions.</em></p>
 </blockquote>
 <p><br></p>
+<hr />
+<h3 id="void-setworldstreamerworldstreamer-newstreamer"><code>void</code> SetWorldStreamer(<code>WorldStreamer</code> NewStreamer)</h3>
+<blockquote>
+<ul>
+<li><code>WorldStreamer NewStreamer</code> - The <a href="../worldstreamer/">WorldStreamer</a> instance to assign.</li>
+</ul>
+</blockquote>
+<p>Assigns a WorldStreamer object to the simulation. When assigned, using FollowMode will save/load chunks using the WorldStreamer object. Set to <code>null</code> to disable this behavior.</p>
+<p><br></p>
+<hr />
+<h3 id="worldstreamer-getworldstreamer"><a href="../worldstreamer/"><code>WorldStreamer</code></a> GetWorldStreamer()</h3>
+<p>Returns the current WorldStreamer instance attached to this node.</p>
+<p><br></p>
+<hr />
+<h3 id="sandinfochunk-getchunkvector2i-pos"><code>SandInfo.Chunk</code> GetChunk(<code>Vector2I</code> pos)</h3>
+<blockquote>
+<ul>
+<li><code>Vector2I pos</code> - The position to search for a chunk.</li>
+</ul>
+</blockquote>
+<p>Returns the chunk currently at <code>pos</code>. Throws an error if there is no chunk at <code>pos</code>.</p>
+<p><br></p>
+<hr />
+<h3 id="bool-simcontainscellvector2i-pos"><code>bool</code> SimContainsCell(<code>Vector2I</code> pos)</h3>
+<blockquote>
+<ul>
+<li><code>Vector2I pos</code> - The position to search for a cell.</li>
+</ul>
+</blockquote>
+<p>Returns Whether the given <code>pos</code> corresponds to a cell in the simulation.</p>
+<p><br></p>
+<hr />
+<h3 id="bool-simcontainschunkvector2i-pos"><code>bool</code> SimContainsChunk(<code>Vector2I</code> pos)</h3>
+<blockquote>
+<ul>
+<li><code>Vector2I pos</code> - The position to search for a chunk.</li>
+</ul>
+</blockquote>
+<p>Returns Whether the given <code>pos</code> corresponds to a chunk in the simulation.</p>
+<p><br></p>
+<hr />
+<h3 id="void-setfollowmodebool-to"><code>void</code> SetFollowMode(<code>bool</code> to)</h3>
+<blockquote>
+<p><code>bool to</code> - The boolean to set <code>FollowEnabled</code> to.</p>
+</blockquote>
+<p>Sets <code>FollowEnabled</code> to <code>to</code>.</p>
+<p><br></p>
+<hr />
+<h3 id="void-setfollownodenode2d-what"><code>void</code> SetFollowNode(<code>Node2D</code> what)</h3>
+<blockquote>
+<p><code>Node2D what</code> - The node to set <code>FollowNode</code> to.</p>
+</blockquote>
+<p>Sets the node for the simulation to follow. If <code>FollowEnabled</code> is set to <code>true</code>, the simulation uses the Node2D's position to determine where the constraints are centered.</p>
+<p><br></p>
+<hr />
+<h3 id="void-setconstraintsvector2-to"><code>void</code> SetConstraints(<code>Vector2</code> to)</h3>
+<blockquote>
+<p><code>Vector2 to</code> - What to set the constraints to.</p>
+</blockquote>
+<p>Sets the constraints for the simulation. If <code>FollowEnabled</code> is set to <code>true</code>, the simulation auto loads/unloads chunks to fill the range ± <code>to</code>.</p>
+<p><br></p>
+<hr />
+<h3 id="vector2-chunklocaltoworldvector2i-fromlocal-bool-includeparentoffset-true"><code>Vector2</code> ChunkLocalToWorld(<code>Vector2I</code> fromLocal, <code>bool</code> includeParentOffset <code>= true</code>)</h3>
+<blockquote>
+<p><code>Vector2I fromLocal</code> - The local chunk position in which to transform.
+<code>bool includeParentOffset</code> - Whether or not to include the offset of the the parent node in the calculation. For example, if the position of the chunk is (32, 32) and the
+ local position of this node is (10, 10) the final position will be (42, 42).</p>
+</blockquote>
+<p>Returns the given chunk local simulation position translated into world position.</p>
+<p><br></p>
+<hr />
+<h3 id="vector2i-localtochunkvector2i-localpos"><code>Vector2I</code> LocalToChunk(<code>Vector2I</code> localPos)</h3>
+<blockquote>
+<p><code>Vector2I localPos</code> - The local simulation position (position of a cell) to convert to chunk position.</p>
+</blockquote>
+<p>Returns the local simulation position to chunk coordinates. Truncates decimals toward zero. Used for finding a cell's chunk from just the position.</p>
+<p><br></p>
+<hr />
+<h3 id="vector2i-worldtochunkvector2-worldpos"><code>Vector2I</code> WorldToChunk(<code>Vector2</code> worldPos)</h3>
+<blockquote>
+<p><code>Vector2I worldPos</code> - The world position (same as global_position for Node2Ds) converted to local chunk position.</p>
+</blockquote>
+<p>Returns the given global (world) position converted to local chunk position.</p>
+<p><br></p>
+<hr />
+<h3 id="void-queueswapsandinfocell-cell1-sandinfocell-cell2"><code>void</code> QueueSwap(<code>SandInfo.Cell</code> Cell1, <code>SandInfo.Cell</code> Cell2)</h3>
+<blockquote>
+<p><code>SandInfo.Cell Cell1</code> - The first cell to swap.
+<code>SandInfo.Cell Cell2</code> - The second cell to swap.</p>
+</blockquote>
+<p>Adds two cells to list of cells to be swapped at the end of the frame.</p>
+<p><br></p>
+<hr />
+<h3 id="void-commitswapqueue"><code>void</code> CommitSwapQueue()</h3>
+<p>Writes all the buffered swaps onto the simulation.</p>
+<p><br></p>
+<hr />
+<h3 id="bool-addchunkvector2i-at"><code>bool</code> AddChunk(<code>Vector2I</code> at)</h3>
+<blockquote>
+<p><code>Vector2I at</code> - The chunk position at which the new chunk will be created.</p>
+</blockquote>
+<p>Adds an empty chunk at the specified coordinates.
+<br><br>
+Returns whether or not the chunk was successfully added.</p>
+<p><br></p>
+<hr />
+<h3 id="bool-removechunkvector2i-at"><code>bool</code> RemoveChunk(<code>Vector2I</code> at)</h3>
+<blockquote>
+<p><code>Vector2I at</code> - The chunk position at which the chunk will be removed.</p>
+</blockquote>
+<p>Removes the chunk at the specified coordinates.
+<br><br>
+Returns whether there was a chunk at the specified position or not.</p>
+<p><br></p>
+<hr />
+<h3 id="void-initgrid"><code>void</code> InitGrid()</h3>
+<p>Populates the grid with Chunk and Cell objects set to the correct default state. One of the functions called in this node's _Ready() function.</p>
+<p><br></p>
+<hr />
+<h3 id="void-updatechunksint-tick"><code>void</code> UpdateChunks(<code>int</code> tick)</h3>
+<blockquote>
+<p><code>int tick</code> - The elapsed frame, mod by two (constrained to 0 and 1). Changes update direction based on the current tick, making the simulation less one-sided.</p>
+</blockquote>
+<p>Updates the cells in all the chunks of the simulation, sending them to the swap buffer. Automatically called in <a href="#void-updatesimulationbool-wait-true">UpdateSimulation()</a>.</p>
+<p><br></p>
+<hr />
+<h3 id="void-decidesleepingchunks"><code>void</code> DecideSleepingChunks()</h3>
+<p>Updates the sleep state of each chunk in the simulation decided by their insomnia count.
+<br><br>
+There are currently no functions that require this to be called as <a href="#void-updatechunksint-tick">UpdateChunks()</a> does it itself.</p>
+<p><br></p>
+<hr />
+<h3 id="void-renderchunkupdates"><code>void</code> RenderChunkUpdates()</h3>
+<p>Loops through each chunk and sends its cell data to its respective ChunkRenderer.</p>
+<p><br></p>
+<hr />
+<h3 id="void-updatesimulationsize"><code>void</code> UpdateSimulationSize()</h3>
+<p>Updates the simulation_size variable if chunk grid size has been changed. This is automatically done, so no need to call this.</p>
+<p><br></p>
+<hr />
+<h3 id="void-updatesimulationbool-wait-true"><code>void</code> UpdateSimulation(<code>bool</code> wait <code>= true</code>)</h3>
+<blockquote>
+<p><code>bool wait</code> - Whether or not to check if the correct amount of time has passed specified in <code>SimulationSpeed</code>, and if not, does not call the function.</p>
+</blockquote>
+<p>Updates the simulation while being safe to put in <code>_Process</code>/<code>_PhysicsProcess</code> because if <code>wait</code> is set to <code>true</code>, it will not tick until the right amount of time has passed specified in <code>SimulationSpeed</code>. 
+If <code>wait</code> is set to <code>false</code>, runs one tick of the simulation regardless.</p>
+<p><br></p>
+<hr />
+<h3 id="sandinfocell-getcellvector2i-pos"><a href="../sandinfo/"><code>SandInfo.Cell</code></a> GetCell(<code>Vector2I</code> pos)</h3>
+<blockquote>
+<p><code>Vector2I pos</code> - The position to get the cell from.</p>
+</blockquote>
+<p>Returns the cell at the specified <code>pos</code>. Throws an error if a cell does not exist at <code>pos</code>.</p>
+<p><br></p>
+<hr />
+<h3 id="void-setcellvector2i-pos-allelements-element"><code>void</code> SetCell(<code>Vector2I</code> pos, <code>AllElements</code> element)</h3>
+<blockquote>
+<p><code>Vector2I pos</code> - The position to get the cell for editing.
+<code>AllElements element</code> - The element to change the cell to.</p>
+</blockquote>
+<p>Replaces the element at <code>pos</code> with <code>element</code>.</p>
+<p><br></p>
+<hr />
+<hr />
+<h3 id="property-descriptions">Property Descriptions</h3>
+<h3 id="float-simulationspeed"><code>float</code> SimulationSpeed</h3>
+<p>How fast the simulation runs, with 1.0 corresponding with 60 updates/second.</p>
+<hr />
+<h3 id="bool-usedirtyrects"><code>bool</code> UseDirtyRects</h3>
+<p>Dirty rects are rectangles calculated at runtime that only contain the cells that were updated in the last frame, lowering the total number of cells needing updates.
+<br><br>
+Recommended for chunk sizes 32 and above.</p>
+<hr />
+<h3 id="int-individualchunksize"><code>int</code> IndividualChunkSize</h3>
+<p>How many cells squared each cell contains. It is squared because the chunk size is only measured on one axis.</p>
+<hr />
+<h3 id="vector2i-chunkgridsize"><code>Vector2I</code> ChunkGridSize</h3>
+<p>How many chunks to be used in the simulation.</p>
+<hr />
+<h3 id="int-chunkinsomnia"><code>int</code> ChunkInsomnia</h3>
+<p>How many update loops with no change in a specific chunk have to occur before sleeping the chunk.</p>
+<hr />
+<h3 id="bool-centered"><code>bool</code> Centered</h3>
+<p>Whether the simulation appears at the center of this Node's <code>position</code> or offset like Control Nodes are.</p>
+<hr />
+<h3 id="int-pixelscale"><code>int</code> PixelScale</h3>
+<p>How big the pixels appear on the screen.</p>
+<hr />
+<h3 id="bool-followenabled"><code>bool</code> FollowEnabled</h3>
+<p>Whether or not to use the <strong>Node Follow</strong> feature.</p>
+<p><strong>Node Follow</strong> constrains the simulation to a certain size by unloading/loading chunks dynamically as the <a href="#node2d-follownode">FollowNode</a>'s position changes. It also works with the filesystem if a <a href="../worldstreamer/">WorldStreamer</a> is set with <a href="#void-setworldstreamerworldstreamer-newstreamer">SetWorldStreamer()</a>.</p>
+<hr />
+<h3 id="node2d-follownode"><code>Node2D</code> FollowNode</h3>
+<p>The Node to follow when <a href="#bool-followenabled">FollowEnabled</a> is true.</p>
+<hr />
+<h3 id="rect2-followareaconstraint"><code>Rect2</code> FollowAreaConstraint</h3>
+<p>The size to constrain the simulation in when <a href="#bool-followenabled">FollowEnabled</a> is true. <strong>DO NOT</strong> set the <code>Position</code> property of the Rect2, it will get overridden.</p>
+<hr />
+<h3 id="bool-followcenterconstraintsonfollowednode"><code>bool</code> FollowCenterConstraintsOnFollowedNode</h3>
+<p>Whether or not to center the constraints on <a href="#node2d-follownode">FollowNode</a> by setting <a href="#rect2-followareaconstraint"><code>FollowAreaConstraint.Position</code></a> to <code>-(</code><a href="#rect2-followareaconstraint"><code>FollowAreaConstraint.Size</code></a> <code>/ 2.0).</code> Only effective when <a href="#bool-followenabled">FollowEnabled</a> is true.</p>
+<hr />
+<h3 id="bool-debugmode"><code>bool</code> DebugMode</h3>
+<p>Draws a visual of chunk borders and dirty rects.</p>
+<hr />
+<h3 id="color-debugchunkbordercolor"><code>Color</code> DebugChunkBorderColor</h3>
+<p>What color to display the chunk borders as when <a href="#bool-debugmode">DebugMode</a> is true.</p>
+<hr />
+<h3 id="bool-showsimborder"><code>bool</code> ShowSimBorder</h3>
+<p>Draws a rectangular border around the entire simulation.</p>
+<hr />
+<h3 id="int-simborderwidth"><code>int</code> SimBorderWidth</h3>
+<p>How wide the line at the simulation border will be.</p>
+<hr />
+<h3 id="dictionaryvector2i-sandinfochunk-chunks"><code>Dictionary&lt;Vector2I, SandInfo.Chunk&gt;</code> Chunks</h3>
+<p>The current chunks in the simulation mapped to their positions.</p>
+<hr />
+<h3 id="vector2i-simulationsize"><code>Vector2I</code> SimulationSize</h3>
+<p>The size of all the cells in the simulation, basically the max extents of the simulation if the top-left corner was (0, 0)</p>
+<hr />
+<h3 id="vector2i-simulationmaxextents"><code>Vector2I</code> SimulationMaxExtents</h3>
+<p>The bottom-rightmost cell position in the simulation.</p>
+<hr />
+<h3 id="vector2i-simulationminextents"><code>Vector2I</code> SimulationMinExtents</h3>
+<p>The top-leftmost cell position in the simulation.</p>
+<hr />
+<h3 id="float-updatetime"><code>float</code> UpdateTime</h3>
+<p>The amount of time it took this frame to update the simulation. Used for debug purposes.</p>
+<hr />
+<h3 id="float-drawtime"><code>float</code> DrawTime</h3>
+<p>The amount of time it took this frame to draw the simulation. Used for debug purposes.</p>
+<hr />
+<h3 id="listchunkrenderercs-activechunkrenderers"><code>List&lt;ChunkRendererCS&gt;</code> ActiveChunkRenderers</h3>
+<p>The active ChunkRendererCSs in the simulation. There is one ChunkRenderer per chunk.</p>
+<hr />
+<h3 id="node2d-chunkrendererparent"><code>Node2D</code> ChunkRendererParent</h3>
+<p>The parent node of all the ChunkRenderer nodes.</p>
+<hr />
+<h3 id="dictionaryvector2i-int-neighborindexoffsets"><code>Dictionary&lt;Vector2I, int&gt;</code> NeighborIndexOffsets</h3>
+<p>A C# Dictionary that maps the Vector2I constants from <a href="../sandinfo/">SandInfo</a> to the amount to add to a cell index to get that specific neighbor.</p>
 <hr />
 
 
