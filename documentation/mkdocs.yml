@@ -30,7 +30,7 @@ nav:
   - Navigation Home: index.md
   - Getting Started: getting_started.md
   - Tutorials:
-      - WorldStreamer: worldstreamer.md
+      - The Element Creator Tab: Tutorials\element_creator_tab.md
   - Reference:
       - PowderSimulation: powdersimnode.md
       - SandInfo: sandinfo.md
