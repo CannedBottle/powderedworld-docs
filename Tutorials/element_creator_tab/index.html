@@ -882,7 +882,10 @@ Here are brief descriptions of each button/field and what they do:
 </table>
 <hr />
 <h2 id="reactions">Reactions</h2>
-<p>The reaction editor lets you create simple reactions with other elements without having to use custom ElementBehaviors.</p>
+<p>The reaction editor lets you create simple reactions with other elements without having to use custom ElementBehaviors. </p>
+<blockquote>
+<p><em>The order of reactions in the Reactions menu is the order they will be executed in. This can sometimes affect the element's intended interaction.</em></p>
+</blockquote>
 <p><img alt="the reaction editor." src="../img/reaction%20editor%20tab.png" /></p>
 <p>It contains a 3 sections:</p>
 <ul>
@@ -931,13 +934,56 @@ if sand_neighbors &gt;= 2:
 </tr>
 <tr>
 <td>Replace Last Iterated Neighbor with [Element]</td>
-<td>When running a reaction, all the marked cells get iterated over. This option replaces the cell the iterator stopped on when the condition became <code>true</code> with [Element].</td>
+<td>When running a reaction, all the marked cells get iterated over. This option replaces the cell the iterator stopped on when the condition became <code>true</code> with [Element]. <em>If no MarkedNeighbors are assigned, this will return the updating cell.</em></td>
 </tr>
 </tbody>
 </table>
 <hr />
 <h2 id="flags">Flags</h2>
-<p>Adding flags to an element changes </p>
+<p>Adding flags to an element is a quick way to add unique features to said element.</p>
+<p><img alt="The element flag menu." src="../img/flag_reaction_tab.png" /></p>
+<p>There are currently two flags available to use on any element:</p>
+<table>
+<thead>
+<tr>
+<th>Flag Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>INDESTRUCTIBLE</td>
+<td>Makes the element unchangable by anything other than itself. <br> <br> <em>If a reaction from a different element adjacent to it would change it, it does not get changed. On the other hand, if it gets changed by its own reaction, it still gets changed.</em></td>
+</tr>
+<tr>
+<td>FLAMMABLE</td>
+<td>Allows the element to be set on fire when adjacent to a cell with the FIRE element. <a href="#flammable-properties">It has some configurable properties.</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="flammable-properties">FLAMMABLE Properties</h3>
+<p><img alt="The flammable options." src="../img/flammable_options.png" /></p>
+<blockquote>
+<p>These properties appear only when the element has the FLAMMABLE flag.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Propery Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Burn Speed</td>
+<td>How long, in seconds, it takes for the element to burn completely. <em>(if it is already on fire)</em></td>
+</tr>
+<tr>
+<td>Spread Resistance</td>
+<td>The percent chance, from 0.0-1.0, for the element to resist being caught on fire every time a FIRE cell reacts with it. <br><br> <em>This should be on the higher end if you want visible changes, since it usually attempts to be set on fire very frequently.</em></td>
+</tr>
+</tbody>
+</table>
 
 
 
