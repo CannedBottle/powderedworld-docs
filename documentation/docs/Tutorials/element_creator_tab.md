@@ -7,7 +7,6 @@ In this tutorial, you will learn how to use the Element Creator Tab in the edito
 ## Sections
 
 * [Menu Overview](#menu-overview)
-* [ACID Tutorial](#element-tutorial-acid)
 
 -----------------------------
 
@@ -35,9 +34,6 @@ Here are brief descriptions of each button/field and what they do:
 
 --------------------------
 
-## Element Tutorial: ACID
-
---------------------------
 
 <br>
 # Extra Field Descriptions
@@ -72,7 +68,8 @@ Here are brief descriptions of each button/field and what they do:
 
 ## Reactions
 
-The reaction editor lets you create simple reactions with other elements without having to use custom ElementBehaviors.
+The reaction editor lets you create simple reactions with other elements without having to use custom ElementBehaviors. 
+> *The order of reactions in the Reactions menu is the order they will be executed in. This can sometimes affect the element's intended interaction.*
 
 ![the reaction editor.](img\reaction editor tab.png)
 
@@ -112,10 +109,31 @@ The effect section has four options for effect types:
 | Replace element with [Element]                | Replaces the currently updating cell with [Element] |
 | Replace All Neighbors with [Element]          | Replaces every adjacent cell with [Element] |
 | Replace Marked Neighbors with [Element]       | Replaces all adjacent cells that are marked in the Marked Neighbors section with [Element] |
-| Replace Last Iterated Neighbor with [Element] | When running a reaction, all the marked cells get iterated over. This option replaces the cell the iterator stopped on when the condition became `true` with [Element]. |
+| Replace Last Iterated Neighbor with [Element] | When running a reaction, all the marked cells get iterated over. This option replaces the cell the iterator stopped on when the condition became `true` with [Element]. *If no MarkedNeighbors are assigned, this will return the updating cell.* |
 
 --------------------------
 
 ## Flags
 
+Adding flags to an element is a quick way to add unique features to said element.
 
+![The element flag menu.](img\flag_reaction_tab.png)
+
+There are currently two flags available to use on any element:
+
+| Flag Name | Description |
+| --------- | ------------ |
+| INDESTRUCTIBLE | Makes the element unchangable by anything other than itself. <br> <br> *If a reaction from a different element adjacent to it would change it, it does not get changed. On the other hand, if it gets changed by its own reaction, it still gets changed.* |
+| FLAMMABLE | Allows the element to be set on fire when adjacent to a cell with the FIRE element. [It has some configurable properties.](#flammable-properties) |
+
+
+### FLAMMABLE Properties
+
+![The flammable options.](img\flammable_options.png)
+
+> These properties appear only when the element has the FLAMMABLE flag.
+
+| Propery Name | Description |
+| ------ | ------- |
+| Burn Speed | How long, in seconds, it takes for the element to burn completely. *(if it is already on fire)* |
+| Spread Resistance | The percent chance, from 0.0-1.0, for the element to resist being caught on fire every time a FIRE cell reacts with it. <br><br> *This should be on the higher end if you want visible changes, since it usually attempts to be set on fire very frequently.* |

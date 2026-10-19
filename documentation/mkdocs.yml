@@ -32,10 +32,12 @@ nav:
   - Tutorials:
       - The Element Creator Tab: Tutorials\element_creator_tab.md
       - Making Custom ElementBehaviors: Tutorials\making_custom_elementbehaviors.md
+      - FireBehavior Explanation: Tutorials\fire_behavior_explanation.md
   - Reference:
       - PowderSimulation: powdersimnode.md
       - SandInfo: sandinfo.md
       - WorldStreamer: worldstreamer.md
       - Elements: elements.md
+      - Cell Functions: cell_class_functions.md
       - Save Order: saving+loading/save_order.md
   - About: about.md
