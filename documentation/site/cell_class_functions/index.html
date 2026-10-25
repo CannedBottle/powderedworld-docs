@@ -357,6 +357,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../Tutorials/using_powdersimulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using PowderSimulation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Tutorials/making_custom_elementbehaviors/" class="md-nav__link">
         
   
@@ -590,6 +618,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cell Functions
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -606,6 +652,163 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gettingsetting-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting/Setting Properties
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-neighbors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Finding Neighbors
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#movement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Movement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#method-descriptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Method Descriptions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Method Descriptions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#void-setelementallelements-to" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        void SetElement(AllElements to)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#void-setfieldstring-fieldname-byte-setto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        void SetField(string FieldName, byte SetTo)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#byte-getfieldstring-fieldname" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        byte GetField(string FieldName)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#void-replacetypeattributeswithdefault" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        void ReplaceTypeAttributesWithDefault()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell-searchneighborelementspowdersimulation-simref-allelements-targetelement-bool-opposite-false-int-targetamount-1-allelements-secondarytarget-null" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cell? SearchNeighborElements(PowderSimulation simRef, AllElements targetElement, bool opposite = false, int targetAmount = 1, AllElements? SecondaryTarget = null)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell-getneighborvector2i-neighbor-powdersimulation-simref" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cell? GetNeighbor(Vector2I neighbor, PowderSimulation simRef)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool-canmovecell-neighborcell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bool CanMove(Cell NeighborCell)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool-trymovevector2i-toneighbor-powdersimulation-simref" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bool TryMove(Vector2I toNeighbor, PowderSimulation simRef)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -694,6 +897,152 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gettingsetting-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting/Setting Properties
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-neighbors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Finding Neighbors
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#movement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Movement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#method-descriptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Method Descriptions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Method Descriptions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#void-setelementallelements-to" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        void SetElement(AllElements to)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#void-setfieldstring-fieldname-byte-setto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        void SetField(string FieldName, byte SetTo)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#byte-getfieldstring-fieldname" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        byte GetField(string FieldName)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#void-replacetypeattributeswithdefault" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        void ReplaceTypeAttributesWithDefault()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell-searchneighborelementspowdersimulation-simref-allelements-targetelement-bool-opposite-false-int-targetamount-1-allelements-secondarytarget-null" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cell? SearchNeighborElements(PowderSimulation simRef, AllElements targetElement, bool opposite = false, int targetAmount = 1, AllElements? SecondaryTarget = null)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell-getneighborvector2i-neighbor-powdersimulation-simref" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cell? GetNeighbor(Vector2I neighbor, PowderSimulation simRef)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool-canmovecell-neighborcell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bool CanMove(Cell NeighborCell)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool-trymovevector2i-toneighbor-powdersimulation-simref" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bool TryMove(Vector2I toNeighbor, PowderSimulation simRef)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -713,6 +1062,154 @@
 
 
 <h1 id="cell-class-functions">Cell Class Functions</h1>
+<p><strong>Defined In:</strong> <a href="../sandinfo/">SandInfo</a></p>
+<hr />
+<p><code>SandInfo.Cell</code> is a class that is used to represent every active cell in the simulation. It contains helper functions that are very useful when making custom behaviors (see <a href="../Tutorials/making_custom_elementbehaviors/">Making Custom ElementBehaviors</a>) or just interacting with cell objects.</p>
+<h3 id="gettingsetting-properties">Getting/Setting Properties</h3>
+<table>
+<thead>
+<tr>
+<th>Return Type</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>void</td>
+<td><a href="#void-setelementallelements-to">SetElement()</a></td>
+</tr>
+<tr>
+<td>void</td>
+<td><a href="#void-setfieldstring-fieldname-byte-setto">SetField()</a></td>
+</tr>
+<tr>
+<td>byte</td>
+<td><a href="#byte-getfieldstring-fieldname">GetField()</a></td>
+</tr>
+<tr>
+<td>void</td>
+<td><a href="#void-replacetypeattributeswithdefault">ReplaceTypeAttributesWithDefault()</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="finding-neighbors">Finding Neighbors</h3>
+<table>
+<thead>
+<tr>
+<th>Return Type</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cell?</td>
+<td><a href="#cell-searchneighborelementspowdersimulation-simref-allelements-targetelement-bool-opposite-false-int-targetamount-1-allelements-secondarytarget-null">SearchNeighborElements()</a></td>
+</tr>
+<tr>
+<td>Cell?</td>
+<td><a href="#cell-getneighborvector2i-neighbor-powdersimulation-simref">GetNeighbor()</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="movement">Movement</h3>
+<table>
+<thead>
+<tr>
+<th>Return Type</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bool</td>
+<td><a href="#bool-canmovecell-neighborcell">CanMove()</a></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><a href="#bool-trymovevector2i-toneighbor-powdersimulation-simref">TryMove()</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="method-descriptions">Method Descriptions</h2>
+<h3 id="void-setelementallelements-to"><code>void</code> SetElement(<a href="../elements/"><code>AllElements</code></a> to)</h3>
+<blockquote>
+<ul>
+<li><a href="../elements/"><code>AllElements</code></a> to - The element to assign to the cell.</li>
+</ul>
+</blockquote>
+<p>Sets this cell's Element while marking it updated on this cell's chunk. Marking a cell updated makes sure it sends the updated information to the renderer at the end of the current tick.</p>
+<p><br></p>
+<hr />
+<h3 id="void-setfieldstring-fieldname-byte-setto"><code>void</code> SetField(<code>string</code> FieldName, <code>byte</code> SetTo)</h3>
+<blockquote>
+<ul>
+<li><code>string</code> FieldName - The name of the field to access. Include prefixes like <code>R#</code>.</li>
+<li><code>byte</code> SetTo - The number to set the field to.</li>
+</ul>
+</blockquote>
+<p>Sets a specified field to a specified value. Also clamps the value to a range of (0, 255).</p>
+<p><br></p>
+<hr />
+<h3 id="byte-getfieldstring-fieldname"><code>byte</code> GetField(<code>string</code> FieldName)</h3>
+<blockquote>
+<ul>
+<li><code>string</code> FieldName - The field whose value to return. Include prefixes like <code>R#</code>.</li>
+</ul>
+</blockquote>
+<p>Returns the specified field's value.</p>
+<p><br></p>
+<hr />
+<h3 id="void-replacetypeattributeswithdefault"><code>void</code> ReplaceTypeAttributesWithDefault()</h3>
+<p>Reverts all changes to this cell's fields and generates new starting fields.</p>
+<p><br></p>
+<hr />
+<h3 id="cell-searchneighborelementspowdersimulation-simref-allelements-targetelement-bool-opposite-false-int-targetamount-1-allelements-secondarytarget-null"><code>Cell?</code> SearchNeighborElements(<code>PowderSimulation</code> simRef, <code>AllElements</code> targetElement, <code>bool</code> opposite <code>= false</code>, <code>int</code> targetAmount <code>= 1</code>, <code>AllElements?</code> SecondaryTarget <code>= null</code>)</h3>
+<blockquote>
+<ul>
+<li><a href="../powdersimnode/"><code>PowderSimulation</code></a> simRef - A reference to the PowderSimulation node this cell is a part of.</li>
+<li><code>AllElements</code> targetElement - The element to look for.</li>
+<li><code>bool</code> opposite <code>= false</code> - whether to look for any element other than <code>targetElement</code> when true, or to look for <code>targetElement</code> when false.</li>
+<li><code>int</code> targetAmount <code>= 1</code> - The amount of neighbors needed to fulfill the condition. <em>Ex. if targetAmount is 2, it will look for 2 neighbors with the targetElement.</em></li>
+<li><code>AllElements?</code> SecondaryTarget <code>= null</code> - A secondary target that will also fulfill the condition.</li>
+</ul>
+</blockquote>
+<p>Iterates over this cell's neighbors and returns the cell it stops on when the condition defined by the parameters is true.</p>
+<p><br></p>
+<hr />
+<h3 id="cell-getneighborvector2i-neighbor-powdersimulation-simref"><code>Cell?</code> GetNeighbor(<code>Vector2I</code> neighbor, <code>PowderSimulation</code> simRef)</h3>
+<blockquote>
+<ul>
+<li><code>Vector2I</code> neighbor - The transformation applied to this cell's Position to get the neighbor cell from. Use <a href="../sandinfo/">SandInfo</a>'s constants like TOPLEFT or TOPRIGHT for better readability.</li>
+<li><a href="../powdersimnode/"><code>PowderSimulation</code></a> simRef - A reference to the PowderSimulation node this cell is a part of.</li>
+</ul>
+</blockquote>
+<p>Returns the neighbor cell specified in <code>neighbor</code>, and <code>null</code> if the neighbor doesn't exist (is past the edge of the simulation).</p>
+<p><br></p>
+<hr />
+<h3 id="bool-canmovecell-neighborcell"><code>bool</code> CanMove(<code>Cell</code> NeighborCell)</h3>
+<blockquote>
+<ul>
+<li><code>Cell</code> NeighborCell - The cell to check whether it can move to it or not.</li>
+</ul>
+</blockquote>
+<p>This is called in TryMove() so if you are just moving the cell, you do not need to call this.
+<br><br>
+Returns whether the cell can move or not, <strong>only</strong> comparing the <code>Cell.Attributes.Type</code> of both cells.</p>
+<p><br></p>
+<hr />
+<h3 id="bool-trymovevector2i-toneighbor-powdersimulation-simref"><code>bool</code> TryMove(<code>Vector2I</code> toNeighbor, <code>PowderSimulation</code> simRef)</h3>
+<blockquote>
+<ul>
+<li><code>Vector2I</code> toNeighbor - The transform applied to this cell's Position to get the neighbor cell from. Use <a href="../sandinfo/">SandInfo</a>'s constants like TOPLEFT or TOPRIGHT for better readability.</li>
+<li><a href="../powdersimnode/"><code>PowderSimulation</code></a> simRef - A reference to the PowderSimulation node this cell is a part of.</li>
+</ul>
+</blockquote>
+<p>Attempts to move this cell to one of its neighbors.
+<br><br>
+Returns whether the move was successful or not.</p>
+<p><br></p>
+<hr />
 
 
 

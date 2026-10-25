@@ -31,6 +31,7 @@ nav:
   - Getting Started: getting_started.md
   - Tutorials:
       - The Element Creator Tab: Tutorials\element_creator_tab.md
+      - Using PowderSimulation: Tutorials\using_powdersimulation.md
       - Making Custom ElementBehaviors: Tutorials\making_custom_elementbehaviors.md
       - FireBehavior Explanation: Tutorials\fire_behavior_explanation.md
   - Reference:
